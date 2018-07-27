@@ -65,7 +65,6 @@ sheet.freeze_panes = 'A2'
 
 baocun.save('C:\\Users\Administrator\Desktop\Feedback_Data.xlsx')
 
-# exit()
 
 import pandas as pd
 
