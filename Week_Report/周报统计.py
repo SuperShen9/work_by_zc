@@ -34,8 +34,8 @@ def dianxiao_week():
     df_all.dropna(how='any', inplace=True)
 
     # # 新系统-统计
-    # df_all.to_excel('C:\\Users\Administrator\Desktop\dianxiao_Data.xlsx',index=False)
-    # exit()
+    df_all.to_excel('C:\\Users\Administrator\Desktop\dianxiao_Data.xlsx',index=False)
+    exit()
 
     df_all = df_all.groupby('电销姓名').sum()
 
@@ -46,6 +46,9 @@ def dianxiao_week():
     len_dx = df_all.shape[0]
 
     df_all = df_all.reset_index(drop=True)
+
+    # 对结果进行排序
+    df_all = df_all.sort_values(by='成交客户', ascending=False)
 
     df_all.loc[len_dx + i, '电销姓名'] = '电销汇总'
 
