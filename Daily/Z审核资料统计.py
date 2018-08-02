@@ -3,16 +3,20 @@
 
 import os, openpyxl
 import pandas as pd
-from Func import file_arrange
+import datetime
+hour = datetime.datetime.now().strftime('%H')
 
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 pd.set_option('display.max_rows', 1000)
 
-from Daily.Func import nian,yue,ri_now
+from Daily.Func import yue,ri_now,ri
 if len(yue) < 2:
     yue = '0' + yue
 if len(ri_now) < 2:
     ri_now = '0' + ri_now
+if len(ri) < 2:
+    ri = '0' + ri
+
 
 os.chdir('D:\Super\superflag')
 
@@ -44,11 +48,12 @@ for x, y, excels in os.walk(filepath):
 print('\n资料收集统计人数：{}\n'.format(len_dx))
 
 # 筛选出不属于昨天的数据
-df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
-# df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, '21'))]
+if int(hour) > 11:
+    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
+else:
+    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
 
 df = df.reset_index(drop=True)
-
 
 i = 20
 if df['审核员姓名'].drop_duplicates().count() != len_dx:
@@ -56,7 +61,6 @@ if df['审核员姓名'].drop_duplicates().count() != len_dx:
     print('\n{} 的日期有问题，请核对!'.format(error))
 
 else:
-
     df_add = pd.DataFrame(df.groupby('收集情况').size())
     df_add.reset_index(inplace=True)
     df_add.columns = ['收集情况', '数量']
