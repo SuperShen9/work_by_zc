@@ -34,8 +34,8 @@ def dianxiao_week():
     df_all.dropna(how='any', inplace=True)
 
     # # 新系统-统计
-    # df_all.to_excel('C:\\Users\Administrator\Desktop\dianxiao_Data.xlsx',index=False)
-    # exit()
+    df_all.to_excel('C:\\Users\Administrator\Desktop\dianxiao_Data.xlsx',index=False)
+    exit()
 
     df_all = df_all.groupby('电销姓名').sum()
 
@@ -150,6 +150,9 @@ def fengkong_week():
 
     for x, y in df_all:
         y.reset_index(inplace=True)
+        # print(y)
+        # print(fengkong_run(y))
+        # y.to_excel('C:\\Users\Administrator\Desktop\k.xlsx',index=False)
         # print(fengkong_run(y).tail(1))
         df_hz = df_hz.append(fengkong_run(y).tail(1), ignore_index=True)
 
@@ -157,14 +160,11 @@ def fengkong_week():
 
     df = zong_run(df_hz)
 
+    # df.rename(columns={'每日新单到期还款情况':'本周新单到期还款情况', '每日老单到期还款情况':'本周老单到期还款情况'}, inplace=True)
+
     if week == str(5):
-        df.rename(columns={'每日新单到期还款情况': '本月新单到期还款情况', '每日老单到期还款情况': '本月老单到期还款情况',
-                           '昨日到期客户数':'本月昨日到期客户数','昨日逾期客户数':'本月昨日逾期客户数'}, inplace=True)
         df.to_excel('C:\\Users\Administrator\Desktop\风控部门{}月-月报.xlsx'.format(yue), index=False)
     else:
-        df.rename(columns={'每日新单到期还款情况': '本周新单到期还款情况', '每日老单到期还款情况': '本周老单到期还款情况',
-                           '昨日到期客户数': '本周昨日到期客户数', '昨日逾期客户数': '本周昨日逾期客户数'}, inplace=True)
-
         df.to_excel('C:\\Users\Administrator\Desktop\风控部门{}月第{}周-周报.xlsx'.format(yue, week), index=False)
 
 

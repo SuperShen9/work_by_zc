@@ -55,46 +55,43 @@ def fengkong_run(df):
             ['自己电话+微信成功', '自己电话+微信总量', '电销+微信成功', '电销+微信总量', '不回', '不全', '收全', '审核通过', '审核拒绝', '新单到期', '新单总量', '老单到期',
              '老单总量', '续借客户', '续借总量']].apply(pd.to_numeric)
 
-    i=40
     for col in df_run.columns:
-        df_run.loc[i + 1, col] = df_run[col].sum()
+        df_run.loc[20 + 1, col] = df_run[col].sum()
 
-    df.loc[i, '电话+微信量（成功/总量）'] = str(int(df_run.loc[i+1]['自己电话+微信成功'])) + '/' + str(int(df_run.loc[i+1]['自己电话+微信总量']))
-    # df.loc[i+1, '电话+微信量（成功/总量）'] = str(round((df_run.loc[i+1]['自己电话+微信成功'] / df_run.loc[i+1]['自己电话+微信总量']) * 100, 2)) + '%'
+    df.loc[20, '电话+微信量（成功/总量）'] = str(int(df_run.loc[21]['自己电话+微信成功'])) + '/' + str(int(df_run.loc[21]['自己电话+微信总量']))
+    # df.loc[21, '电话+微信量（成功/总量）'] = str(round((df_run.loc[21]['自己电话+微信成功'] / df_run.loc[21]['自己电话+微信总量']) * 100, 2)) + '%'
 
-    df.loc[i, '电销+微信量（成功/总量）'] = str(int(df_run.loc[i+1]['电销+微信成功'])) + '/' + str(int(df_run.loc[i+1]['电销+微信总量']))
-    # df.loc[i+1, '电销+微信量（成功/总量）'] = str(round((df_run.loc[i+1]['电销+微信成功'] / df_run.loc[i+1]['电销+微信总量']) * 100, 2)) + '%'
+    df.loc[20, '电销+微信量（成功/总量）'] = str(int(df_run.loc[21]['电销+微信成功'])) + '/' + str(int(df_run.loc[21]['电销+微信总量']))
+    # df.loc[21, '电销+微信量（成功/总量）'] = str(round((df_run.loc[21]['电销+微信成功'] / df_run.loc[21]['电销+微信总量']) * 100, 2)) + '%'
 
-    df.loc[i, '收单量（不回/不全/收全）'] = str(int(df_run.loc[i+1]['不回'])) + '/' + str(int(df_run.loc[i+1]['不全'])) + '/' + str(
-        int(df_run.loc[i+1]['收全']))
-    # df.loc[i+1, '收单量（不回/不全/收全）'] = str(
-    #     round(df_run.loc[i+1]['收全'] / (df_run.loc[i+1]['不回'] + df_run.loc[i+1]['不全'] + df_run.loc[i+1]['收全']) * 100,
+    df.loc[20, '收单量（不回/不全/收全）'] = str(int(df_run.loc[21]['不回'])) + '/' + str(int(df_run.loc[21]['不全'])) + '/' + str(
+        int(df_run.loc[21]['收全']))
+    # df.loc[21, '收单量（不回/不全/收全）'] = str(
+    #     round(df_run.loc[21]['收全'] / (df_run.loc[21]['不回'] + df_run.loc[21]['不全'] + df_run.loc[21]['收全']) * 100,
     #           2)) + '%'
 
-    df.loc[i, '审核通过/拒绝'] = str(int(df_run.loc[i+1]['审核通过'])) + '/' + str(int(df_run.loc[i+1]['审核拒绝']))
-    # df.loc[i+1, '审核通过/拒绝'] = str(
-    #     round(df_run.loc[i+1]['审核通过'] / (df_run.loc[i+1]['审核通过'] + df_run.loc[i+1]['审核拒绝']) * 100, 2)) + '%'
+    df.loc[20, '审核通过/拒绝'] = str(int(df_run.loc[21]['审核通过'])) + '/' + str(int(df_run.loc[21]['审核拒绝']))
+    # df.loc[21, '审核通过/拒绝'] = str(
+    #     round(df_run.loc[21]['审核通过'] / (df_run.loc[21]['审核通过'] + df_run.loc[21]['审核拒绝']) * 100, 2)) + '%'
 
-    df.loc[i, '每日新单到期还款情况'] = str(int(df_run.loc[i+1]['新单到期'])) + '/' + str(int(df_run.loc[i+1]['新单总量']))
-    # df.loc[i+1, '每日新单到期还款情况'] = str(round((df_run.loc[i+1]['新单到期'] / df_run.loc[i+1]['新单总量']) * 100, 2)) + '%'
+    df.loc[20, '每日新单到期还款情况'] = str(int(df_run.loc[21]['新单到期'])) + '/' + str(int(df_run.loc[21]['新单总量']))
+    # df.loc[21, '每日新单到期还款情况'] = str(round((df_run.loc[21]['新单到期'] / df_run.loc[21]['新单总量']) * 100, 2)) + '%'
 
-    df.loc[i, '每日老单到期还款情况'] = str(int(df_run.loc[i+1]['老单到期'])) + '/' + str(int(df_run.loc[i+1]['老单总量']))
-    # df.loc[i+1, '每日老单到期还款情况'] = str(round((df_run.loc[i+1]['老单到期'] / df_run.loc[i+1]['老单总量']) * 100, 2)) + '%'
+    df.loc[20, '每日老单到期还款情况'] = str(int(df_run.loc[21]['老单到期'])) + '/' + str(int(df_run.loc[21]['老单总量']))
+    # df.loc[21, '每日老单到期还款情况'] = str(round((df_run.loc[21]['老单到期'] / df_run.loc[21]['老单总量']) * 100, 2)) + '%'
 
-    df.loc[i, '续借率'] = str(int(df_run.loc[i+1]['续借客户'])) + '/' + str(int(df_run.loc[i+1]['续借总量']))
-    # df.loc[i+1, '续借率'] = str(round((df_run.loc[i+1]['续借客户'] / df_run.loc[i+1]['续借总量']) * 100, 2)) + '%'
+    df.loc[20, '续借率'] = str(int(df_run.loc[21]['续借客户'])) + '/' + str(int(df_run.loc[21]['续借总量']))
+    # df.loc[21, '续借率'] = str(round((df_run.loc[21]['续借客户'] / df_run.loc[21]['续借总量']) * 100, 2)) + '%'
 
-    df.loc[i, '电话量'] = df_run.loc[i+1]['电话量']
-    df.loc[i, '昨日到期客户数'] = df_run.loc[i+1]['昨日到期客户数']
-    df.loc[i, '昨日逾期客户数'] = df_run.loc[i+1]['昨日逾期客户数']
-    df.loc[i, '续期客户量'] = df_run.loc[i+1]['续期客户量']
-    df.loc[i, '持单总量'] = df_run.loc[i+1]['持单总量']
+    df.loc[20, '电话量'] = df_run.loc[21]['电话量']
+    df.loc[20, '昨日到期客户数'] = df_run.loc[21]['昨日到期客户数']
+    df.loc[20, '昨日逾期客户数'] = df_run.loc[21]['昨日逾期客户数']
+    df.loc[20, '续期客户量'] = df_run.loc[21]['续期客户量']
+    df.loc[20, '持单总量'] = df_run.loc[21]['持单总量']
 
-    df.loc[i, '审核员姓名'] = df.loc[0, '审核员姓名']
+    df.loc[20, '审核员姓名'] = df.loc[0, '审核员姓名']
 
     df = df.reset_index(drop=True)
-    # print(df)
-    # exit()
 
     return df
 

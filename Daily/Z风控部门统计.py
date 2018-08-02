@@ -11,6 +11,10 @@ if len(yue) < 2:
     yue = '0' + yue
 if len(ri_now) < 2:
     ri_now = '0' + ri_now
+if len(ri) < 2:
+    ri = '0' + ri
+
+
 os.chdir('D:\Super\superflag')
 
 wbf = openpyxl.load_workbook('数据合并.xlsx')
@@ -43,7 +47,7 @@ df = df.reset_index(drop=True)
 # 筛选出不属于昨天的数据
 df = df[df['审核员姓名'] != '张三']
 
-if int(hour) > 10:
+if int(hour) > 11:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
 else:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]

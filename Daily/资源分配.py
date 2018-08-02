@@ -22,7 +22,7 @@ def active(name):
     ws['C1'] = '数据反馈'
     ws['D1'] = '数据反馈2'
      # Create a data-validation object with list validation
-    dv = DataValidation(type="list", formula1='"不需要,未接,设置,需要,关机,停机,空号"', allow_blank=True)
+    dv = DataValidation(type="list", formula1='"不需要,暂时不需要,未接,设置,需要,关机,停机,空号"', allow_blank=True)
     # Optionally set a custom error message
     dv.error ='内容填写错误'
     dv.errorTitle = 'Invalid Entry'
@@ -54,15 +54,15 @@ else:
     for i in all_list:
         df = pd.read_excel(i)
 
-        if df.shape[1] != 2:
+        if df.shape[1] >4:
             print('\n请按照要求放入资源：增加“姓名”，“手机号”两个标题！')
         elif df.columns[1] != '手机号':
             print('\n请按照要求放入资源：“手机号”标题错误！')
         elif df.shape[0] > 4000:
             print('数据数量超过4000条，请注意资源合理分配！')
         else:
-            dict1 = {0: '欧阳小蝶', 1: '张加胜', 2: '周煜哲',3: '张嘉庆'}
-            # dict1 = {0: '欧阳小蝶', 1: '张加胜', 2: '张嘉庆', 3: '周煜哲', 4: '张雄', 5: '张永祥'}
+            # dict1 = {0: '欧阳小蝶', 1: '张加胜', 2: '周煜哲', 3: '张嘉庆', 4:'郑恩'}
+            dict1 = {0: '欧阳小蝶', 1: '周煜哲', 2: '张嘉庆', 3: '张加胜', 4: '郑恩', 5: '张永祥',6:'张雄'}
             print('请确认分配名单：')
             print(dict1)
             ziyuan = input('\n请输入你的资源名称：')

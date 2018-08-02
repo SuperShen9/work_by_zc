@@ -22,7 +22,7 @@ def active(name):
     ws['C1'] = '数据反馈'
     ws['D1'] = '数据反馈2'
      # Create a data-validation object with list validation
-    dv = DataValidation(type="list", formula1='"不需要,未接,设置,关机,停机,空号,加微信,年龄,负债高,借条逾期,阿福逾期,审核被拒"', allow_blank=True)
+    dv = DataValidation(type="list", formula1='"不需要,暂时不需要,未接,设置,关机,停机,空号,加微信,年龄,负债高,借条逾期,阿福逾期,审核被拒"', allow_blank=True)
     # Optionally set a custom error message
     dv.error ='内容填写错误'
     dv.errorTitle = 'Invalid Entry'
@@ -61,8 +61,8 @@ else:
         elif df.shape[0] > 4000:
             print('数据数量超过4000条，请注意资源合理分配！')
         else:
-            dict1 = {0: '陈翔', 1: '姚俊涛', 2: '彭树宇',  3: '汪秀',4:'王小忠',
-                     5:'章若文', 6:'胡遥遥', 7:'许晓春',8:'谢爱国',9:'陈海波'}
+            dict1 = {0: '陈海波', 1: '姚俊涛', 2: '彭树宇',  3: '汪秀',4:'王小忠',
+                     5:'章若文', 6:'胡遥遥', 7:'许晓春',8:'谢爱国'}
 
             print('请确认分配名单：')
             print(dict1)
