@@ -4,10 +4,23 @@ from datetime import *
 import pandas as pd
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 pd.set_option('display.max_rows', 1500)
+
 time1 = datetime.today()
 nian = str(time1.year)
 yue = str(time1.month)
 ri = str(time1.day-1)
+ri_zhou = str(time1.day-5)
+ri_now = str(time1.day)
+
+if len(yue) < 2:
+    yue = '0' + yue
+if len(ri_now) < 2:
+    ri_now = '0' + ri_now
+if len(ri) < 2:
+    ri = '0' + ri
+if len(ri_zhou) < 2:
+    ri_zhou = '0' + ri_zhou
+
 
 ri_now = str(time1.day)
 def fengkong_run(df):

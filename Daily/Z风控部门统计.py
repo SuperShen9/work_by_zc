@@ -44,6 +44,7 @@ for x, y, excels in os.walk(filepath):
 
 df = df.reset_index(drop=True)
 
+
 # 筛选出不属于昨天的数据
 df = df[df['审核员姓名'] != '张三']
 
@@ -227,5 +228,6 @@ else:
         df.to_excel('C:\\Users\Administrator\Desktop\风控部门{}月{}日报告.xlsx'.format(yue, ri_now), index=False)
     else:
         df_new.to_excel('C:\\Users\Administrator\Desktop\风控{}月{}日新老单跟新.xlsx'.format(yue, ri), index=False)
+        os.mkdir('昨日新老单')
 
     print('\n没有问题，统计已存放桌面！')

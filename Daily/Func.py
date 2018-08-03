@@ -13,6 +13,13 @@ yue = str(time1.month)
 ri = str(time1.day-1)
 ri_now = str(time1.day)
 
+if len(yue) < 2:
+    yue = '0' + yue
+if len(ri_now) < 2:
+    ri_now = '0' + ri_now
+if len(ri) < 2:
+    ri = '0' + ri
+
 
 def file_arrange():
     path = 'C:\\Users\Administrator\Desktop\\员工报告统计'

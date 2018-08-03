@@ -42,8 +42,11 @@ for x, y, excels in os.walk(filepath):
     len_dx = len(excels)
     for excel in excels:
         df1 = pd.read_excel(excel)
+        df1[['日期','审核员姓名']] = df1[['日期','审核员姓名']].fillna(method='ffill')
         df = df.append(df1)
         list1.append(excel.split('-')[1])
+
+df=df[['日期','审核员姓名','资料姓名','资料手机号','收集情况']]
 
 print('\n资料收集统计人数：{}\n'.format(len_dx))
 

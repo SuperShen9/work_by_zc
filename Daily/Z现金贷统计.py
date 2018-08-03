@@ -10,6 +10,8 @@ if len(yue) < 2:
     yue = '0' + yue
 if len(ri_now) < 2:
     ri_now = '0' + ri_now
+if len(ri) < 2:
+    ri = '0' + ri
 
 os.chdir('D:\Super\superflag')
 
@@ -47,8 +49,8 @@ if int(hour) > 10:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
     # df = df[df['日期'] == pd.to_datetime('20180731')]
 else:
-    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
-    df = df[df['日期'] == pd.to_datetime('20180801')]
+    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
+    # df = df[df['日期'] == pd.to_datetime('20180801')]
 
 
 # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue,'16'))]
