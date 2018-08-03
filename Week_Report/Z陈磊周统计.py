@@ -36,6 +36,7 @@ for x, y, excels in os.walk(filepath):
 print('\n陈磊周报统计人数：{}\n'.format(len_dx))
 
 # 筛选出不属于昨天的数据
+df = df[df['审核姓名'] != '张三']
 if int(hour) > 11:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
 else:
@@ -43,9 +44,11 @@ else:
 
 df = df.reset_index(drop=True)
 
+
 i = 20
 if df.shape[0] != len_dx:
-    error = [l for l in list1 if l not in list(df['电销姓名'])]
+    error = [l for l in list1 if l not in list(df['审核姓名'])]
+    print(list(df['审核姓名']))
     print('\n{} 的日期有问题，请核对!'.format(error))
 
 else:
