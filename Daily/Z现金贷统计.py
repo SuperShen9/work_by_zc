@@ -49,8 +49,8 @@ if int(hour) > 10:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
     # df = df[df['日期'] == pd.to_datetime('20180731')]
 else:
-    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
-    # df = df[df['日期'] == pd.to_datetime('20180801')]
+    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
+    df = df[df['日期'] == pd.to_datetime('20180803')]
 
 
 # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue,'16'))]
