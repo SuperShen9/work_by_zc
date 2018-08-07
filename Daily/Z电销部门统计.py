@@ -41,14 +41,18 @@ for x, y, excels in os.walk(filepath):
         df = df.append(df1)
         list1.append(excel.split('-')[1])
 
+
 print('\n电销统计人数：{}'.format(len_dx))
 
 # 筛选出不属于昨天的数据
 df = df[df['电销姓名'] != '张三']
-df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
-# df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, '21'))]
+# df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
+df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, '06'))]
 
+# 按照数量进行排序
+df.sort_values(by='成交客户', ascending=0, inplace=True)
 df = df.reset_index(drop=True)
+
 
 i = 20
 if df.shape[0] != len_dx:
