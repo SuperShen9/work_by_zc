@@ -54,8 +54,8 @@ print('\n资料收集统计人数：{}\n'.format(len_dx))
 if int(hour) > 11:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
 else:
-    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
-    df = df[df['日期'] == pd.to_datetime('20180802')]
+    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
+    # df = df[df['日期'] == pd.to_datetime('20180802')]
 
 df = df.reset_index(drop=True)
 
@@ -72,7 +72,7 @@ else:
     df.loc[1, ' '] = ' '
     df = pd.concat([df, df_add], axis=1)
 
-    df.to_excel('C:\\Users\Administrator\Desktop\审核资料{}月{}日统计.xlsx'.format(yue, ri_now), index=False)
+    df.to_excel('C:\\Users\Administrator\Desktop\审核资料{}月{}日统计.xlsx'.format(yue, ri), index=False)
     print('\n没有问题，统计已存放桌面！')
 
 

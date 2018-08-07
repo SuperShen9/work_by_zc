@@ -2,7 +2,7 @@
 # author：Super.Shen
 
 import pandas as pd
-import os
+from Daily import Func
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 pd.set_option('display.max_rows', 1000)
 
@@ -16,16 +16,16 @@ df_dup = df_dup[['手机号','数据反馈']]
 df_dup['手机号'].apply(lambda x: int(x))
 
 
-df =pd.merge(left=df,right=df_dup,on='手机号',how='left')
+df = pd.merge(left=df,right=df_dup,on='手机号',how='left')
 df = df[df['数据反馈'].isnull()]
 no2 = df.shape[0]
 df['日期'] = df['申请典当时间'].apply(lambda x: x[:10])
 df['排序'] = df['申请典当时间'].apply(lambda x: x[14:16])
 
-df = df.drop_duplicates(subset=['手机号'], keep='first')
+df = df.drop_duplicates(subset=['手机号'], keep='last')
 no3 = df.shape[0]
 
-print('\n去重数据量：{}'.format(no2-no3))
+print('\n去重数据量：{}\n\n输出数据量：{}'.format(no2-no3,no3))
 
-df.to_excel('C:\\Users\Administrator\Desktop\机猫赎当_当日去重.xlsx', index=False)
+df.to_excel('C:\\Users\Administrator\Desktop\机猫赎当_{}{}去重数据.xlsx'.format(Func.yue,Func.ri_now), index=False)
 

@@ -8,11 +8,14 @@ pd.set_option('display.max_rows', 1000)
 
 df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 
-# # #按 名称 提取资源
-# df = df[df['资源来源'].apply(lambda x:x[:2]) == '机猫']
-# print('\n数据数量：{}'.format(df.shape[0]))
-# df.to_excel('D:\Super\shudang\每日核对数据.xlsx', index=False)
-# exit()
+
+# #按 名称 提取资源
+df = df[df['资源来源'].apply(lambda x:x[:2]) == '机猫']
+no1 = df.shape[0]
+df = df.drop_duplicates(subset=['手机号'], keep='last')
+print('\n数据去重数量：{}'.format(no1-df.shape[0]))
+df.to_excel('D:\Super\shudang\每日核对数据.xlsx', index=False)
+exit()
 
 # 查看资源比例
 # for x,y in df.groupby('资源来源'):
@@ -81,5 +84,6 @@ else:
 
 # # 重置资源
 # df=df[df['资源来源']!='还']
+# df = df[df['手机号']!= 'j18535721885']
 # df.to_hdf('D:\Super\database\data.h5', key='data')
 # exit()

@@ -64,6 +64,7 @@ else:
     df.loc[len_dx + i + 3, '日期'] = 'Flag'
     df.loc[len_dx + i + 3, '电销姓名'] = '电销汇总'
     k = 4
+
     for col in df.columns[2:]:
         df.loc[len_dx + i, col] = df[col].sum()
         df.loc[len_dx + i + k, '日期'] = col
