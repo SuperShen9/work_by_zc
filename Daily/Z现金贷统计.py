@@ -47,14 +47,12 @@ df = df[df['姓名'] != '张三']
 
 if int(hour) > 10:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
-    # df = df[df['日期'] == pd.to_datetime('20180731')]
+    # df = df[df['日期'] == pd.to_datetime('20180805')]
 else:
-    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
-    df = df[df['日期'] == pd.to_datetime('20180803')]
-
+    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
+    # df = df[df['日期'] == pd.to_datetime('20180804')]
 
 # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue,'16'))]
-
 
 df = df.reset_index(drop=True)
 

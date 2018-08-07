@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55e8ae81-8286-4ce1-929f-17b8148af91b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Daily/Z审核资料统计.py" beforeDir="false" afterPath="$PROJECT_DIR$/Daily/Z审核资料统计.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Daily/Z电销部门统计.py" beforeDir="false" afterPath="$PROJECT_DIR$/Daily/Z电销部门统计.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/机猫_友东遗留.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daily/Z现金贷统计.py" beforeDir="false" afterPath="$PROJECT_DIR$/Daily/Z现金贷统计.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week_Report/data_append.py" beforeDir="false" afterPath="$PROJECT_DIR$/Week_Report/data_append.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/解析json.py" beforeDir="false" afterPath="$PROJECT_DIR$/备用代码/解析json.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,20 +20,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Z电销部门统计.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Daily/Z电销部门统计.py">
+      <file leaf-file-name="Z现金贷统计.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Daily/Z现金贷统计.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="218">
+              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+              <folding>
+                <element signature="e#45#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Z审核资料统计.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Daily/Z审核资料统计.py">
+      <file leaf-file-name="data_append.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Week_Report/data_append.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="73" column="58" lean-forward="true" selection-start-line="72" selection-start-column="3" selection-end-line="73" selection-end-column="58" />
+            <state relative-caret-position="111">
+              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding>
+                <element signature="e#45#64#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pack1/resource.py" />
         <option value="$PROJECT_DIR$/pack1/text.py" />
         <option value="$PROJECT_DIR$/pack1/[option].spec" />
         <option value="$PROJECT_DIR$/pack1/options.spec" />
@@ -126,13 +134,14 @@
         <option value="$PROJECT_DIR$/Week_Report/周报统计.py" />
         <option value="$PROJECT_DIR$/Week_Report/Func.py" />
         <option value="$PROJECT_DIR$/Week_Report/Z陈磊周统计.py" />
-        <option value="$PROJECT_DIR$/Daily/Z现金贷统计.py" />
-        <option value="$PROJECT_DIR$/Week_Report/data_append.py" />
         <option value="$PROJECT_DIR$/机猫_赎当数据.py" />
         <option value="$PROJECT_DIR$/Daily/资源分配.py" />
         <option value="$PROJECT_DIR$/Daily/Z风控部门统计.py" />
         <option value="$PROJECT_DIR$/Daily/Z审核资料统计.py" />
         <option value="$PROJECT_DIR$/Daily/Z电销部门统计.py" />
+        <option value="$PROJECT_DIR$/机猫_友东遗留.py" />
+        <option value="$PROJECT_DIR$/Week_Report/data_append.py" />
+        <option value="$PROJECT_DIR$/Daily/Z现金贷统计.py" />
       </list>
     </option>
   </component>
@@ -162,6 +171,11 @@
               <item name="untitled" type="462c0819:PsiDirectoryNode" />
               <item name="Daily" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="Week_Report" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -174,18 +188,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用代码" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\text" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\Week_Report" />
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled\pack" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\Week_Report" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\Daily" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\check" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\pack" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\pack1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\text" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\备用代码" />
-      <recent name="C:\Users\Administrator\PycharmProjects\untitled\Week_Report" />
       <recent name="C:\Users\Administrator\PycharmProjects\untitled\pack" />
     </key>
   </component>
@@ -201,8 +215,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Z电销部门统计">
-    <configuration name="资源分配" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Z现金贷统计">
+    <configuration name="实时数据监测" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -210,47 +224,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Daily" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Daily/资源分配.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Z风控部门统计" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Daily" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Daily/Z风控部门统计.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="Z审核资料统计" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Daily" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Daily/Z审核资料统计.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/实时数据监测.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -1696,6 +1674,42 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="机猫_友东遗留" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/机猫_友东遗留.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="data_append" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Week_Report" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Week_Report/data_append.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="text" type="PythonConfigurationType" factoryName="Python">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -1797,19 +1811,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.text" />
-      <item itemvalue="Python.资源分配" />
-      <item itemvalue="Python.Z风控部门统计" />
-      <item itemvalue="Python.Z审核资料统计" />
-      <item itemvalue="Python.Z现金贷统计" />
       <item itemvalue="Python.Z电销部门统计" />
+      <item itemvalue="Python.机猫_友东遗留" />
+      <item itemvalue="Python.data_append" />
+      <item itemvalue="Python.实时数据监测" />
+      <item itemvalue="Python.Z现金贷统计" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Z电销部门统计" />
-        <item itemvalue="Python.Z审核资料统计" />
         <item itemvalue="Python.Z现金贷统计" />
-        <item itemvalue="Python.Z风控部门统计" />
-        <item itemvalue="Python.资源分配" />
+        <item itemvalue="Python.data_append" />
+        <item itemvalue="Python.实时数据监测" />
+        <item itemvalue="Python.机猫_友东遗留" />
+        <item itemvalue="Python.Z电销部门统计" />
       </list>
     </recent_temporary>
   </component>
@@ -1833,7 +1847,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834436" visible="true" weight="0.17600423" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5005285" side_tool="true" weight="0.37472036" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947146" visible="true" weight="0.35458612" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947146" visible="true" weight="0.3456376" />
       <window_info id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1877,7 +1891,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/BaiduNetdiskDownload/Bolling_Code/other/data_ht.py" />
     <entry file="file://$PROJECT_DIR$/text/play.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1955,13 +1968,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/机猫_赎当.py" />
-    <entry file="file://$PROJECT_DIR$/解析json.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/ProgramData/Anaconda3/Lib/site-packages/pandas/core/tools/datetimes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -2030,13 +2036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/实时数据监测.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Daily/Z催收部门统计.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -2054,16 +2053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/机猫_赎当数据.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DAY_ready.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -2078,30 +2067,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Daily/Z现金贷统计.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="80" column="24" lean-forward="true" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Daily/Z风控部门统计.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="232" column="28" lean-forward="true" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Week_Report/data_append.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="e#45#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Daily/Z审核资料统计.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -2109,10 +2074,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Daily/Z风控部门统计.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2924">
+          <caret line="232" column="28" lean-forward="true" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Daily/Z电销部门统计.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/备用代码/解析json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/机猫_赎当数据.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-end-line="24" selection-end-column="52" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/实时数据监测.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/机猫_友东遗留.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week_Report/data_append.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Daily/Z现金贷统计.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+          <folding>
+            <element signature="e#45#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
