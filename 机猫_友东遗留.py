@@ -19,6 +19,7 @@ df_dup['手机号'].apply(lambda x: int(x))
 df = pd.merge(left=df, right=df_dup, on='手机号', how='left')
 df = df[df['数据反馈'].isnull()]
 df = df.drop_duplicates(subset=['手机号'], keep='last')
+print('数据数量统计：{}'.format(df.shape[0]))
 
 df.to_excel('C:\\Users\Administrator\Desktop\友东_{}{}遗留数据.xlsx'.format(Func.yue,Func.ri_now), index=False)
 

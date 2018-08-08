@@ -133,7 +133,7 @@ else:
             x = ''
         return x
 
-    df_check['电话量乱填'] = (df_run['自己电话+微信总量'] <= 60).apply(lambda x: pan(x))
+    df_check['电话量乱填'] = (df_run['自己电话+微信总量'] <= 500).apply(lambda x: pan(x))
     df_check['电话+微信检测'] = (df_run['自己电话+微信成功'] <= df_run['自己电话+微信总量']).apply(lambda x: pan(x))
     df_check['电销+微信检测'] = (df_run['电销+微信成功'] <= df_run['电销+微信总量']).apply(lambda x: pan(x))
     df_check['收全检测'] = (df_run['收全'] == df_run['审核通过'] + df_run['审核拒绝']).apply(lambda x: pan(x))

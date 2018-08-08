@@ -9,7 +9,7 @@ pd.set_option('display.max_rows', 1000)
 df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 
 
-# # #按【名称】提取资源
+# #按【名称】提取资源
 # df = df[df['资源来源'].apply(lambda x:x[:2]) == '机猫']
 # no1 = df.shape[0]
 # df = df.drop_duplicates(subset=['手机号'], keep='last')
@@ -20,8 +20,8 @@ df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 # 查看资源比例
 # for x,y in df.groupby('资源来源'):
 #     print(x)
-print(df.groupby('资源来源').size())
-exit()
+# print(df.groupby('资源来源').size())
+# exit()
 
 # df.to_hdf('D:\Super\database\data.h5', key='data', mode='a')
 
@@ -61,11 +61,13 @@ else:
 # exit()
 
 
-# # 标准数据列
+# # 标准资源名称
+# print('\n原始数据量：{}\n'.format(df.shape[0]))
 # df2 = pd.read_excel('D:\Super\database\列名更新.xlsx')
 # df=pd.merge(left=df,right=df2,on='资源来源',how='left',sort=True)
 # df['资源来源'] = df['Flag']
 # df=df[df.columns[:-1]]
+# print('\n结束时数据量：{}\n'.format(df.shape[0]))
 # df.to_hdf('D:\Super\database\data.h5', key='data')
 # exit()
 
@@ -86,4 +88,11 @@ else:
 # df=df[df['资源来源']!='还']
 # df = df[df['手机号']!= 'j18535721885']
 # df.to_hdf('D:\Super\database\data.h5', key='data')
+# exit()
+
+# 按名字提取
+# cdt1 = df['姓名']=='周煜哲'
+# cdt2 = df['姓名']=='张雄'
+# df = df[cdt1 | cdt2]
+# print(df.groupby('姓名').size())
 # exit()
