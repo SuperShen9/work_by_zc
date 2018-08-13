@@ -54,8 +54,8 @@ print('\n资料收集统计人数：{}\n'.format(len_dx))
 if int(hour) > 11:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
 else:
-    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
-    # df = df[df['日期'] == pd.to_datetime('20180802')]
+    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
+    df = df[df['日期'] == pd.to_datetime('20180810')]
 
 df = df.reset_index(drop=True)
 
