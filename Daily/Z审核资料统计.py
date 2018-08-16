@@ -80,8 +80,11 @@ else:
     df.loc[1, ' '] = ' '
     df = pd.concat([df, df_add], axis=1)
 
+    if int(hour) > 11:
+        df.to_excel('C:\\Users\Administrator\Desktop\审核资料{}月{}日统计.xlsx'.format(yue, ri_now), index=False)
+    else:
+        df.to_excel('C:\\Users\Administrator\Desktop\审核资料{}月{}日统计.xlsx'.format(yue, ri), index=False)
 
-    df.to_excel('C:\\Users\Administrator\Desktop\审核资料{}月{}日统计.xlsx'.format(yue, ri), index=False)
     print('\n没有问题，统计已存放桌面！')
 
 

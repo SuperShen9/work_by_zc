@@ -50,6 +50,7 @@ if df.shape[1] == 9:
     print('\n数据库新增数据量：{}条'.format(all_count-or_count))
     print('\n{}条数据被去重'.format(add_count - (all_count - or_count)))
     df.to_hdf('D:\Super\database\data.h5', key='data', mode='a')
+    print('\n总数据量：{}'.format(df.shape[0]))
     rizhi.to_excel('D:\Super\资源汇总代码run\日志.xlsx')
 else:
     print('\n数据列有问题，请仔细核对!')
