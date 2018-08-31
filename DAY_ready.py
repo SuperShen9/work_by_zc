@@ -20,8 +20,8 @@ file6 = 'C:\\Users\Administrator\Desktop\\{}{}{} 员工报告'.format(nian, yue,
 # file4 = 'C:\\Users\Administrator\Desktop\\巧玲 {}{}'.format(yue, ri_now)
 # file5 = 'C:\\Users\Administrator\Desktop\\陈磊 {}{}'.format(yue, ri_now)
 
-list1 = [file1, file2, file3,  file6]
-# file4, file5,,  file7
+list1 = [file3,  file6]
+# file4, file5,,  file7,file1, file2,
 
 for i in list1:
     if os.path.exists(i):
