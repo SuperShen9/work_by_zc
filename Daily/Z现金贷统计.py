@@ -46,8 +46,8 @@ print('\n现金贷催收统计人数：{}'.format(len_cs))
 df = df[df['姓名'] != '张三1']
 
 if int(hour) > 10:
-    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
-    df = df[df['日期'] == pd.to_datetime('20180901')]
+    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
+    # df = df[df['日期'] == pd.to_datetime('20180901')]
 else:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
     # df = df[df['日期'] == pd.to_datetime('20180804')]
@@ -66,6 +66,8 @@ if df.shape[0] != len_cs:
 else:
     df.loc[len_cs + i, '阶段'] = '汇总:'
     df.loc[len_cs + i, '姓名'] = df['姓名'].count()
+
+    df = df[['日期','阶段','姓名','分单量','停机','关机','空号','设置','未接','拒接','接通单数','总持单量','完结','续期','部分还款','部分还款金额','代扣金额','催回率','催回总金额']]
 
     for col in df.columns[3:]:
         df.loc[len_cs + i, col] = df[col].sum()
