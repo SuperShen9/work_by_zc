@@ -100,3 +100,4 @@ else:
     df = pd.merge(left=df, right=df_s, on=['数据反馈'], how='left')
     df.rename(columns=({'Unnamed: 1': '资源发送时间', 'Unnamed: 3': '部门', 'Unnamed: 4': '姓名'}), inplace=True)
     df.to_excel('C:\\Users\Administrator\Desktop\Feedback_Data.xlsx', index=False)
+
