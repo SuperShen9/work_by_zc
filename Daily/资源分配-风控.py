@@ -22,7 +22,7 @@ def active(name):
     ws['C1'] = '数据反馈'
     ws['D1'] = '数据反馈2'
      # Create a data-validation object with list validation
-    dv = DataValidation(type="list", formula1='"不需要,暂时不需要,未接,设置,关机,停机,空号,加微信,年龄,负债高,借条逾期,阿福逾期,审核被拒"', allow_blank=True)
+    dv = DataValidation(type="list", formula1='"需要,不需要,暂时不需要,未接,设置,关机,停机,空号,加微信,年龄,负债高,借条逾期,阿福逾期,审核被拒"', allow_blank=True)
     # Optionally set a custom error message
     dv.error ='内容填写错误'
     dv.errorTitle = 'Invalid Entry'
