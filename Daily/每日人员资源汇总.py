@@ -45,7 +45,7 @@ for no, i in enumerate(list1):
             df1.loc[iii, '电话数量'] = y['姓名'].count()
             df1.loc[iii, '接通率'] = str(int((y[y['接通率'] == '接通']['接通率'].count() / y['接通率'].count()) * 100)) + '%'
             df1.loc[iii, '需求率'] = str(int((y[y['需求率'] == '需要']['需求率'].count() / y['需求率'].count()) * 100)) + '%'
-            ii += 1
+            iii += 1
 
         df1 = df1.reset_index(drop=True)
 

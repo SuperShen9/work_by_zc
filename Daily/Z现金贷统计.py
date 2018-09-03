@@ -70,8 +70,10 @@ else:
     for col in df.columns[3:]:
         df.loc[len_cs + i, col] = df[col].sum()
 
-    print(df)
-    exit()
+    df['催回率'] = (df['完结'] + df['续期'])/df['分单量']
+
+    # print(df)
+    # exit()
 
     if int(hour) > 10:
         df.to_excel('C:\\Users\Administrator\Desktop\现金贷催收{}月{}日报告.xlsx'.format(yue, ri_now), index=False)
