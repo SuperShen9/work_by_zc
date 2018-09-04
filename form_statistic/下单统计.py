@@ -4,12 +4,12 @@ import pandas as pd
 import os
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 pd.set_option('display.max_rows', 1000)
+from Func import nian, yue, ri_now
 
-file1 = 'C:\\Users\Administrator\Desktop\Feedback_Data.xlsx'
+file1 = 'C:\\Users\Administrator\Desktop\Feedback.xlsx'
 file2 = 'C:\\Users\Administrator\Desktop\Week_Data.xlsx'
 
 list1 = [file1, file2]
-
 
 def run(no, x, y):
     y = y.reset_index(drop=True)
@@ -30,12 +30,12 @@ def run(no, x, y):
 
     df1.loc[no, '下单量'] = y[y['下单率'] == '下单']['姓名'].count()
     df1.loc[no, '下单率'] = str(int((y[y['下单率'] == '下单']['下单率'].count() / y['下单率'].count()) * 100)) + '%'
-    no += 1
+
 
 # 统计每个业务员的数据
-for no, i in enumerate(list1):
-    if os.path.exists(i):
-        df = pd.read_excel(i)
+for num, excel in enumerate(list1):
+    if os.path.exists(excel):
+        df = pd.read_excel(excel)
 
         # 统计接通率/需求率
         i = 0
@@ -62,7 +62,7 @@ for no, i in enumerate(list1):
         # print(df1)
         # exit()
 
-        if no==0:
-            df1.to_excel('C:\\Users\Administrator\Desktop\\每日电话拨打统计.xlsx',index=False)
-        elif no==1:
+        if num == 0:
+            df1.to_excel('C:\\Users\Administrator\Desktop\\{}{}{}电话统计.xlsx'.format(nian, yue, ri_now), index=False)
+        elif num == 1:
             df1.to_excel('C:\\Users\Administrator\Desktop\\每周电话数据统计.xlsx', index=False)
