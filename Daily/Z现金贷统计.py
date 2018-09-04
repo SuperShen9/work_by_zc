@@ -13,19 +13,19 @@ if len(ri_now) < 2:
 if len(ri) < 2:
     ri = '0' + ri
 
-os.chdir('D:\Super\superflag')
-
-wbf = openpyxl.load_workbook('数据合并.xlsx')
-
-sheet = wbf['现金贷催收']
-
-hang1 = sheet.max_row + 1
-
-spam = {}
-for row in range(2, hang1):
-    flag = sheet['A' + str(row)].value.lower()
-    number = sheet['B' + str(row)].value
-    spam.setdefault(flag, number)
+# os.chdir('D:\Super\superflag')
+#
+# wbf = openpyxl.load_workbook('数据合并.xlsx')
+#
+# sheet = wbf['现金贷催收']
+#
+# hang1 = sheet.max_row + 1
+#
+# spam = {}
+# for row in range(2, hang1):
+#     flag = sheet['A' + str(row)].value.lower()
+#     number = sheet['B' + str(row)].value
+#     spam.setdefault(flag, number)
 
 filepath = 'D:\Super\\每日报告合并'
 
