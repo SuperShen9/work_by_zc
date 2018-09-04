@@ -46,8 +46,8 @@ print('\n现金贷催收统计人数：{}'.format(len_cs))
 df = df[df['姓名'] != '张三1']
 
 if int(hour) > 10:
-    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
-    # df = df[df['日期'] == pd.to_datetime('20180901')]
+    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
+    df = df[df['日期'] == pd.to_datetime('20180903')]
 else:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
     # df = df[df['日期'] == pd.to_datetime('20180804')]
@@ -64,6 +64,8 @@ if df.shape[0] != len_cs:
     print('\n{} 的日期有问题，请核对!'.format(error))
 
 else:
+    df['阶段'] = df['阶段'].apply(lambda x: x.upper())
+    df.sort_values(by='阶段', inplace=True)
     df.loc[len_cs + i, '阶段'] = '汇总:'
     df.loc[len_cs + i, '姓名'] = df['姓名'].count()
 
@@ -74,8 +76,8 @@ else:
 
     df['催回率'] = (df['完结'] + df['续期'])/df['分单量']
 
-    # print(df)
-    # exit()
+    print(df)
+    exit()
 
     if int(hour) > 10:
         df.to_excel('C:\\Users\Administrator\Desktop\现金贷催收{}月{}日报告.xlsx'.format(yue, ri_now), index=False)

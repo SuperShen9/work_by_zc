@@ -8,9 +8,6 @@ pd.set_option('display.max_rows', 1000)
 
 df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 
-# df = df[df['资源来源'].apply(lambda x:x[:2]) == '大鹏']
-# df.to_excel('D:\Super\shudang\每日核对数据.xlsx', index=False)
-# exit()
 
 # #按【名称】提取资源
 # df = df[df['资源来源'].apply(lambda x:x[:2]) == '机猫']
@@ -36,7 +33,7 @@ df_add = pd.read_excel('D:\Super\资源汇总代码run\Feedback_Data.xlsx')
 add_count = df_add.shape[0]
 
 df = df.append(df_add, ignore_index=True)
-df.drop_duplicates(keep='first', inplace=True)
+df.drop_duplicates(keep='last', inplace=True)
 
 rz_add.loc[0, '代码运行时间'] = str(datetime.datetime.now())[:19]
 rz_add.loc[0, '起始数据量'] = or_count
