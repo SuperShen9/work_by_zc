@@ -59,6 +59,16 @@ for num, excel in enumerate(list1):
             iii += 1
 
         df1 = df1.reset_index(drop=True)
+
+        df1.loc[df1['姓名'] == '电销', '部门'] = ''
+        df1.loc[df1['姓名'] == '电销', '姓名'] = '电销汇总'
+
+        df1.loc[df1['姓名'] == '风控', '部门'] = ''
+        df1.loc[df1['姓名'] == '风控', '姓名'] = '风控汇总'
+
+        df1.loc[df1['姓名'] == '渠道A', '部门'] = ''
+        df1.loc[df1['姓名'] == '渠道A', '姓名'] = '汇总'
+
         # print(df1)
         # exit()
 
