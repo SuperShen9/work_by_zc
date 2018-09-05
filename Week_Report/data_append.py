@@ -8,6 +8,9 @@ pd.set_option('display.max_rows', 1000)
 
 df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 
+df.to_excel('C:\\Users\Administrator\Desktop\渠道A总数据.xlsx')
+exit()
+
 # 查看资源比例
 # for x,y in df.groupby('资源来源'):
 #     print(x)
@@ -20,7 +23,7 @@ rizhi = pd.read_excel('D:\Super\资源汇总代码run\日志.xlsx')
 rz_add = pd.DataFrame()
 
 or_count = df.shape[0]
-df_add = pd.read_excel('D:\Super\资源汇总代码run\Feedback_Data.xlsx')
+df_add = pd.read_excel('D:\Super\资源汇总代码run\Feedback.xlsx')
 add_count = df_add.shape[0]
 
 df = df.append(df_add, ignore_index=True)
@@ -37,7 +40,7 @@ rizhi = rizhi.reset_index(drop=True)
 
 all_count = df.shape[0]
 
-if df.shape[1] == 9:
+if df.shape[1] == 12:
     print('\n数据库新增数据量：{}条'.format(all_count-or_count))
     print('\n{}条数据被去重'.format(add_count - (all_count - or_count)))
     df.to_hdf('D:\Super\database\data.h5', key='data', mode='a')

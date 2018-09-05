@@ -17,8 +17,7 @@ for i in alllist:
     if len(i.split('-')) < 3:
         print('文件名称有问题，请检查！')
         exit()
-    # elif i.split('-')[2][:4]=='每日数据统计':
-    #     shutil.move(old, new)
+
 
     else:
         # 产生信号
