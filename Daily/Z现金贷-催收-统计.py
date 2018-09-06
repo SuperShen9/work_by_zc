@@ -34,8 +34,8 @@ print('\n现金贷催收统计人数：{}'.format(len_cs))
 df = df[df['姓名'] != '张三1']
 
 if int(hour) > 10:
-    # df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
-    df = df[df['日期'] == pd.to_datetime('20180903')]
+    df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
+    # df = df[df['日期'] == pd.to_datetime('20180903')]
 else:
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri))]
     # df = df[df['日期'] == pd.to_datetime('20180804')]

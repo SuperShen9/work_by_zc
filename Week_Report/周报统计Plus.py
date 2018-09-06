@@ -195,7 +195,7 @@ def xianjindai_week():
     for col in df_all.columns[2:]:
         df_all.loc[len_dx + i, col] = df_all[col].sum()
 
-    df_all['催回率'] = (df_all['完结'] + df_all['续期']) / df_all['分单量']
+
 
     # 重置df名称
     df = df_all.reset_index(drop=True)
@@ -208,6 +208,8 @@ def xianjindai_week():
         for col in y.columns[2:]:
             df.loc[ii, col] = y[col].sum()
         ii += 1
+
+    df['催回率'] = (df['完结'] + df['续期']) / df['分单量']
 
     if week == str(5):
         df.to_excel('C:\\Users\Administrator\Desktop\{}贷催收{}月 - 月报.xlsx'.format(bm, yue), index=False)
