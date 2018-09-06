@@ -33,8 +33,10 @@ df4.rename(columns={'用户手机号': '手机号'}, inplace=True)
 
 # 合并申请数据
 df = pd.merge(left=df, right=df2, on='手机号', how='left')
+
 # 合并下单数据
 df = pd.merge(left=df, right=df3, on='手机号', how='left')
+
 # 合并拒绝数据
 df = pd.merge(left=df, right=df4, on='手机号', how='left')
 
