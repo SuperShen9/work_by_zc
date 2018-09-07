@@ -124,9 +124,9 @@ def cuishou_week():
         df_all.loc[len_dx + i + k, '逾期总量'] = df_all.loc[len_new, col]
         k += 1
     if week == str(5):
-        df_all.to_excel('C:\\Users\Administrator\Desktop\{}部门{}月-月报.xlsx'.format(bm, yue), index=False)
+        df_all.to_excel('C:\\Users\Administrator\Desktop\{}催收{}月-月报.xlsx'.format(bm, yue), index=False)
     else:
-        df_all.to_excel('C:\\Users\Administrator\Desktop\{}部门{}月第{}周-周报.xlsx'.format(bm, yue, week), index=False)
+        df_all.to_excel('C:\\Users\Administrator\Desktop\{}催收{}月第{}周-周报.xlsx'.format(bm, yue, week), index=False)
 
 from Func import fengkong_run,zong_run
 def fengkong_week():
@@ -220,7 +220,7 @@ def xianjindai_week():
 if df1.drop_duplicates().shape[0] == 1:
     if bm == '电销':
         dianxiao_week()
-    elif bm == '催收':
+    elif bm == '借条':
         cuishou_week()
     elif bm == '风控':
         fengkong_week()

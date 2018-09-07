@@ -25,13 +25,17 @@ os.chdir('D:\Super\data_hebing')
 k1 = 0
 filepath = 'D:\Super\data_hebing'
 for x, y, excels in os.walk(filepath):
+    # print(excels)
     if len(excels) == 0:
         print('\n请放入数据，再启动程序')
         exit()
     baocun = openpyxl.Workbook()
     sheet = baocun.create_sheet(index=0, title='data')
     for excel in excels:
+
+
         wb = xlrd.open_workbook(excel)
+
         sheet1 = wb.sheets()[0]
         hang = sheet1.nrows
         lie = sheet1.ncols

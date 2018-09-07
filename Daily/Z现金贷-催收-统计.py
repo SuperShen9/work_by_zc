@@ -51,6 +51,8 @@ if df.shape[0] != len_cs:
     print('\n{} 的日期有问题，请核对!'.format(error))
 
 else:
+    # print(df)
+    # exit()
     df['阶段'] = df['阶段'].apply(lambda x: x.upper())
     df.sort_values(by='阶段', inplace=True)
     df.fillna(value=0, inplace=True)

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # author：Super.Shen
 import pandas as pd
+import numpy as np
 import os
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 pd.set_option('display.max_rows', 1000)
@@ -26,7 +27,11 @@ def run(no, x, y):
     df1.loc[no, '申请率'] = str(int((y[y['申请率'] == '申请']['申请率'].count() / y['申请率'].count()) * 100)) + '%'
 
     df1.loc[no, '拒绝量'] = y[y['拒绝率'] == '拒绝']['姓名'].count()
-    df1.loc[no, '拒绝率'] = str(int((y[y['拒绝率'] == '拒绝']['拒绝率'].count() / y[y['申请率']=='申请']['姓名'].count()) * 100)) + '%'
+
+    if y[y['申请率']=='申请']['姓名'].count()==0:
+        df1.loc[no, '拒绝率']=0
+    else:
+        df1.loc[no, '拒绝率'] = str(int((y[y['拒绝率'] == '拒绝']['拒绝率'].count() / y[y['申请率']=='申请']['姓名'].count()) * 100)) + '%'
 
     df1.loc[no, '下单量'] = y[y['下单率'] == '下单']['姓名'].count()
     df1.loc[no, '下单率'] = str(int((y[y['下单率'] == '下单']['下单率'].count() / y['下单率'].count()) * 100)) + '%'
