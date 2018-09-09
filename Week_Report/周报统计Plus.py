@@ -210,6 +210,7 @@ def xianjindai_week():
         ii += 1
 
     df['催回率'] = (df['完结'] + df['续期']) / df['分单量']
+    df['催回率'].fillna(value=0, inplace=True)
 
     if week == str(5):
         df.to_excel('C:\\Users\Administrator\Desktop\{}贷催收{}月 - 月报.xlsx'.format(bm, yue), index=False)
@@ -228,5 +229,3 @@ if df1.drop_duplicates().shape[0] == 1:
         xianjindai_week()
 else:
     print('存在不同部门，请检查文件！')
-
-
