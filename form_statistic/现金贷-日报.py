@@ -10,6 +10,9 @@ df = pd.read_excel('D:\Super\\xianjindai\当日到期.xlsx')
 df['续期时间'] = df['应还时间'].apply(lambda x: x[8:10])
 
 df.loc[df['续期时间'] != str(ri_now), '订单状态'] = '已续期'
+# df.loc[df['续期时间'] != '08', '订单状态'] = '已续期'
+# df.loc[df['续期时间'] == '16', '订单状态'] = '已逾期'
+
 
 df_name = pd.read_excel('D:\Super\\xianjindai\审核员.xlsx')
 df = pd.merge(left=df, right=df_name, on='审核员', how='left')
@@ -29,6 +32,9 @@ df1.loc[0, '续期客户'] = df[df['订单状态'] == '已续期'].shape[0]
 df1.loc[0, '已完结'] = df[df['订单状态'] == '已完结'].shape[0]
 df1.loc[0, 'kong1'] = ''
 df1.loc[0, 'kong2'] = ''
+
+# df.to_excel('C:\\Users\Administrator\Desktop\现金贷第一个表.xlsx', index=False)
+# exit()
 
 df1.loc[0, '新单逾期'] = df[df['订单状态'] == '待付租'][df['新老单'] == '新客户'].shape[0]
 df1.loc[0, '老单逾期'] = df[df['订单状态'] == '待付租'][df['新老单'] == '老客户'].shape[0]
@@ -58,5 +64,5 @@ for x, y in df.groupby('标准名字'):
 df2 = pd.merge(left=df_sec, right=df2, on='姓名', how='left')
 df2.fillna(value=0, inplace=True)
 df2.to_excel('C:\\Users\Administrator\Desktop\现金贷SEC表.xlsx', index=False)
-# print(df2)
+
 
