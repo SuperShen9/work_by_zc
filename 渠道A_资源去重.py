@@ -9,7 +9,9 @@ pd.set_option('display.max_rows', 1000)
 # 读取总数据
 df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 # 读取当日数据
-df_dup = pd.read_excel('C:\\Users\Administrator\Desktop\渠道A{}{}.xlsx'.format(yue, ri))
+# df_dup = pd.read_excel('C:\\Users\Administrator\Desktop\渠道A{}{}.xlsx'.format(yue, ri))
+
+df_dup = pd.read_excel('C:\\Users\Administrator\Desktop\渠道A0907.xlsx'.format(yue, ri))
 
 # 标记总数据为打过
 df['Flag'] = 'call'
@@ -35,6 +37,6 @@ df['index'] = df['index'].apply(lambda x: x+1)
 # 取出有效索引
 df = df[['index', '用户姓名', '手机号', '申请典当时间']]
 
-df.to_excel('C:\\Users\Administrator\Desktop\渠道A0908_run.xlsx', index=False)
+df.to_excel('C:\\Users\Administrator\Desktop\渠道A{}{}_run.xlsx'.format(yue,ri), index=False)
 exit()
 print(df.head())

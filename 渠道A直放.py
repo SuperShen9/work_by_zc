@@ -7,7 +7,7 @@ from Func import nian, yue, ri_now, ri
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 pd.set_option('display.max_rows', 1000)
 
-# # 第二次：去重再保存
+# 第二次：去重再保存
 # df = pd.read_hdf('D:\Super\dapeng\data_sd_dup.h5', key='data')
 # no1 = df.shape[0]
 # df1 = pd.read_excel('D:\Super\dapeng\\1\\ADD09{}.xlsx'.format(ri_now))
