@@ -9,8 +9,8 @@ pd.set_option('display.max_rows', 1000)
 df = pd.read_excel('D:\Super\\xianjindai\当日到期.xlsx')
 df['续期时间'] = df['应还时间'].apply(lambda x: x[8:10])
 
-# df.loc[df['续期时间'] != str(ri_now), '订单状态'] = '已续期'
-df.loc[df['续期时间'] != '08', '订单状态'] = '已续期'
+df.loc[df['续期时间'] != str(ri_now), '订单状态'] = '已续期'
+# df.loc[df['续期时间'] != '08', '订单状态'] = '已续期'
 # df.loc[df['续期时间'] == '16', '订单状态'] = '已逾期'
 
 

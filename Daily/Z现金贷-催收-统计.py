@@ -54,6 +54,7 @@ else:
     # print(df)
     # exit()
     df['阶段'] = df['阶段'].apply(lambda x: x.upper())
+    df['阶段'] = df['阶段'].apply(lambda x: x.strip())
     df.sort_values(by='阶段', inplace=True)
     df.fillna(value=0, inplace=True)
 
