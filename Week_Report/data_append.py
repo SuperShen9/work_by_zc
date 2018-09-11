@@ -8,8 +8,8 @@ pd.set_option('display.max_rows', 1000)
 
 df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 
-# df.to_excel('C:\\Users\Administrator\Desktop\渠道A总数据.xlsx')
-# exit()
+df.to_excel('C:\\Users\Administrator\Desktop\渠道A总数据.xlsx')
+exit()
 
 # 查看资源比例
 # for x,y in df.groupby('资源来源'):

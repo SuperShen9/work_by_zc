@@ -2,7 +2,7 @@
 # author：Super.Shen
 
 import os
-from Week_Report.Func import nian,yue,ri_now
+from Week_Report.Func import nian, yue, ri_now
 if len(yue) < 2:
     yue = '0' + yue
 if len(ri_now) < 2:
