@@ -4,7 +4,11 @@
 import pandas as pd
 import numpy as np
 
-s5 = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
-s6 = pd.Series([2, 3, 4], index=['b', 'c', 'd'])
+df = pd.DataFrame(np.arange(20).reshape(5, 4),
+                  columns=['a', 'b1', 'c', 'd23'])
 
-print(pd.concat([s5, s6], axis=1, sort=True, join='outer', keys=['one', 'two']))
+print(df)
+
+print('-'*50)
+
+print(df.groupby(len, axis=1).sum())
