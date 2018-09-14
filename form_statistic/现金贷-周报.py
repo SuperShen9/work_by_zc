@@ -48,8 +48,11 @@ df['综合首逾'] = (df['逾期新单']+df['逾期老单'])/(df['到期新单']
 
 # 填充为0的单元格
 df.fillna(value=0, inplace=True)
+
+# print(df)
+# exit()
 # 导出数据
-# df.to_excel('C:\\Users\Administrator\Desktop\现金贷-审核 -第一周.xlsx', index=False)
+df.to_excel('C:\\Users\Administrator\Desktop\现金贷-审核 -第二周.xlsx', index=False)
 
 # # 画图操作
 # from pyecharts import Line

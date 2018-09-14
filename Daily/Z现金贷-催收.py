@@ -34,6 +34,7 @@ print('\n现金贷催收统计人数：{}'.format(len_cs))
 df = df[df['姓名'] != '张三1']
 
 if int(hour) > 10:
+    pass
     df = df[df['日期'] == pd.to_datetime('2018{}{}'.format(yue, ri_now))]
     # df = df[df['日期'] == pd.to_datetime('20180903')]
 else:
@@ -44,6 +45,8 @@ else:
 df = df.reset_index(drop=True)
 
 df.sort_values(by='阶段', inplace=True)
+# print(df)
+# exit()
 
 i = 20
 if df.shape[0] != len_cs:

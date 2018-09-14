@@ -4,11 +4,11 @@
 import pandas as pd
 import numpy as np
 
-df = pd.DataFrame(np.arange(20).reshape(5, 4),
-                  columns=['a', 'b1', 'c', 'd23'])
-
+df = pd.DataFrame({'A': [1, 2, 2, 2, 2],
+                   'B': [3, 3, 4, 4, 4],
+                   'C': [1, 1, np.nan, 1, 1]})
 print(df)
+print('-----')
 
-print('-'*50)
-
-print(df.groupby(len, axis=1).sum())
+print(pd.crosstab(df['A'], df['B']))
+print('-----')

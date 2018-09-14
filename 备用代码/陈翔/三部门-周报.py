@@ -4,7 +4,7 @@ import os
 import pandas as pd
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
 pd.set_option('display.max_rows', 1500)
-from Week_Report.Func import yue
+from Func import yue
 
 week = input('\n{}月第几周？\n'.format(yue))
 
@@ -194,6 +194,8 @@ def xianjindai_week():
 
     for col in df_all.columns[2:]:
         df_all.loc[len_dx + i, col] = df_all[col].sum()
+
+
 
     # 重置df名称
     df = df_all.reset_index(drop=True)
