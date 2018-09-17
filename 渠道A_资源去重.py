@@ -9,8 +9,6 @@ pd.set_option('display.max_rows', 1000)
 # 读取总数据
 df = pd.read_hdf('D:\Super\database\data.h5', key='data')
 
-
-
 # 读取当日数据
 # df_dup = pd.read_excel('C:\\Users\Administrator\Desktop\渠道A{}{}.xlsx'.format(yue, ri))
 

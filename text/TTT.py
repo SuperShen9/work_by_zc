@@ -4,11 +4,10 @@
 import pandas as pd
 import numpy as np
 
-df = pd.DataFrame({'A': [1, 2, 2, 2, 2],
-                   'B': [3, 3, 4, 4, 4],
-                   'C': [1, 1, np.nan, 1, 1]})
-print(df)
-print('-----')
+df = pd.read_hdf('D:\Super\database\\before9\data0831.h5', key='data')
 
-print(pd.crosstab(df['A'], df['B']))
-print('-----')
+print('\n9月之前数据量：{}'.format(df.shape[0]))
+
+df2 = pd.read_hdf('D:\Super\database\data.h5', key='data')
+
+print('\n9月之后数据量：{}'.format(df2.shape[0]))

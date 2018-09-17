@@ -52,7 +52,7 @@ df.fillna(value=0, inplace=True)
 # print(df)
 # exit()
 # 导出数据
-df.to_excel('C:\\Users\Administrator\Desktop\现金贷-审核 -第二周.xlsx', index=False)
+df.to_excel('C:\\Users\Administrator\Desktop\现金贷-审核 -第三周.xlsx', index=False)
 
 # # 画图操作
 # from pyecharts import Line

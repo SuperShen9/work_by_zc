@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # author：Super.Shen
 import pandas as pd
-import os,openpyxl
+import os, openpyxl
 from Daily.Func import nian,yue,ri_now
 import shutil
 pd.set_option('expand_frame_repr', False)  # 当列太多时不换行
@@ -62,9 +62,9 @@ else:
             print('数据数量超过4000条，请注意资源合理分配！')
         else:
 
-            dict1 = {0: 'A待定', 1: '陈凯', 2:'张永祥', 3:'张加胜',  4: '方妙芬', 5: '潘婷',  6: '王国平', 7: '王勋'}
+            dict1 = {0: '王勋', 1: '陈凯', 2:'张永祥', 3:'张加胜',  4: '方妙芬', 5: '潘婷',  6: '王国平'}
             # dict1 = {0: '陈俊挠', 1: '陈凯', 2: '张永祥', 3: '王国平', 4: '王勋', 5: '潘婷', 6: '张加胜'}
-            # dict1 = {0: '张永祥'}
+
             print('请确认分配名单：')
             print(dict1)
             ziyuan = input('\n请输入你的资源名称：')
